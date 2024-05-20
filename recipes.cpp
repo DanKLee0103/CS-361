@@ -18,7 +18,7 @@ int main(){
         cout << "Waiting for the word 'run' in start.txt..." << endl;
         this_thread::sleep_for(chrono::seconds(2)); //Wait for 2 seconds before checking again
     }
-    
+
     string option;
     this_thread::sleep_for(chrono::seconds(2));//Just to allow user more time to read
     cout << "Welcome to the random recipe generator! You want ideas for cooking but can't think of what you want?\n";
@@ -89,13 +89,17 @@ void helper(string selection){
 
             //open the file and print its contents
             ifstream file(filename);
-            if(file.is_open()){
+            ofstream destinationfile("start.txt", ios::trunc); // Open in truncate mode
+
+            if (file.is_open() && destinationfile.is_open()) {
                 cout << "\n\n";
                 while (getline(file, line)) {
                     cout << line << endl;
-                    this_thread::sleep_for(chrono::duration<double>(0.5));//Just to allow user more time to read
+                    destinationfile << line << endl;
+                    //this_thread::sleep_for(chrono::duration<double>(0.5));
                 }
                 file.close();
+                destinationfile.close();
                 cout << "\n\n\n";
             } 
             //error if directory/folder not found
@@ -112,13 +116,16 @@ void helper(string selection){
 
             //open the file and print its contents
             ifstream file(filename);
-            if (file.is_open()) {
+            ofstream destinationfile("start.txt", ios::trunc); // Open in truncate mode
+
+            if (file.is_open() && destinationfile.is_open()) {
                 cout << "\n\n";
                 while (getline(file, line)) {
                     cout << line << endl;
-                    this_thread::sleep_for(chrono::duration<double>(0.5));
+                    destinationfile << line << endl;
                 }
                 file.close();
+                destinationfile.close();
                 cout << "\n\n\n";
             } 
             //error if directory/folder not found
@@ -135,15 +142,19 @@ void helper(string selection){
 
             //open the file and print its contents
             ifstream file(filename);
-            if (file.is_open()) {
+            ofstream destinationfile("start.txt", ios::trunc); // Open in truncate mode
+
+            if (file.is_open() && destinationfile.is_open()) {
                 cout << "\n\n";
                 while (getline(file, line)) {
                     cout << line << endl;
-                    this_thread::sleep_for(chrono::duration<double>(0.5));
+                    destinationfile << line << endl;
+                    //this_thread::sleep_for(chrono::duration<double>(0.5));
                 }
                 file.close();
+                destinationfile.close();
                 cout << "\n\n\n";
-            } 
+            }
             //error if directory/folder not found
             else
                 cerr << "Error: Unable to open file " << filename << endl;
@@ -158,13 +169,17 @@ void helper(string selection){
 
             //open the file and print its contents
             ifstream file(filename);
-            if (file.is_open()) {
+            ofstream destinationfile("start.txt", ios::trunc); // Open in truncate mode
+
+            if (file.is_open() && destinationfile.is_open()) {
                 cout << "\n\n";
                 while (getline(file, line)) {
                     cout << line << endl;
-                    this_thread::sleep_for(chrono::duration<double>(0.5));
+                    destinationfile << line << endl;
+                    //this_thread::sleep_for(chrono::duration<double>(0.5));
                 }
                 file.close();
+                destinationfile.close();
                 cout << "\n\n\n";
             } 
             //error if directory/folder not found
