@@ -1,5 +1,7 @@
 #CS-361 Communication Contract
 
+Git clone in git bash using the page link or directly download the files locally from this page.
+
 REQUEST
 
 For requesting data, you need to simply have a feature that allows you to write into a .txt file (which specifically is named "start.txt").
@@ -67,5 +69,7 @@ Run these lines to have the microservice program actively running and looking fo
     The microservice will automatically do all the work for you and place a random recipe in "start.txt" based on your choice. Then, the main program
     will read it and display it on the terminal.
 
-UML sequence diagram showing how requesting and receiving data works. Make it detailed enough that your teammate (and your grader) will understand.
+UML Sequence Diagram
+
+![alt text](image.png)
 
