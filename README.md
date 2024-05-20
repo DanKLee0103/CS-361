@@ -71,5 +71,6 @@ Run these lines to have the microservice program actively running and looking fo
 
 UML Sequence Diagram
 
-![image](https://github.com/DanKLee0103/CS-361/assets/161083419/38c76977-8a10-4375-a481-7415b79554f4)
+![image](https://github.com/DanKLee0103/CS-361/assets/161083419/83418dff-aeca-4498-b289-1785a397fd76)
+
 
