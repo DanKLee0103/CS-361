@@ -1,0 +1,15 @@
+Cheese and Tomato Quiche:
+    Ingredients:
+        Eggs
+        Tomatoes
+        Cream cheese
+        Cheddar
+        Thyme
+        Parsley
+
+    Instructions:
+        Mix ingredients.
+        Bake until set.
+        Serve and savor! 😊
+
+    Calories: 573 per serving
