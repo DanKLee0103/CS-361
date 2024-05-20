@@ -10,67 +10,36 @@
 using namespace std;
 
 void helper(string selection); //prototype
-string select(string option);
-bool check_run(string filename);
+string check_run(string filename);
 
 int main(){
-    while (!check_run("start.txt")) {
-        cout << "Waiting for the word 'run' in start.txt..." << endl;
-        this_thread::sleep_for(chrono::seconds(2)); //Wait for 2 seconds before checking again
+    string category;
+    while ((category = check_run("start.txt")) != "Breakfast" && category != "breakfast" && category != "Lunch" &&
+           category != "lunch" && category != "Dinner" && category != "dinner" && category != "Dessert" &&
+           category != "dessert") {
+        cout << "Waiting for a category in start.txt..." << endl;
+        this_thread::sleep_for(chrono::seconds(2)); // Wait for 2 seconds before checking again
     }
-
-    string option;
-    this_thread::sleep_for(chrono::seconds(2));//Just to allow user more time to read
-    cout << "Welcome to the random recipe generator! You want ideas for cooking but can't think of what you want?\n";
-    this_thread::sleep_for(chrono::seconds(2));//Just to allow user more time to read
-    cout << "Well, we have the right recipes just for you! You can select from many different categories: Breakfast, Lunch, Dinner, or Dessert\n";
-    this_thread::sleep_for(chrono::seconds(2));//Just to allow user more time to read and not feel rushed
-    cout << "Please enter the category of recipe you want: ";
-    cin >> option;
-    string selection = select(option);
-    helper(selection);
-
-    string cont;
-    cout << "Would you like to look at another recipe? Enter yes or no: ";
-    cin >> cont;              
-    while(cont == "Yes" || cont == "yes" || cont == "Y" || cont == "y"){
-        cout << "Please enter the category of recipes you want (Breakfast, Lunch, Dinner, or Dessert): ";
-        cin >> option;
-        selection = select(option);
-        helper(selection);
-        cout << "Would you like to look at another recipe? Enter yes or no: ";
-        cin >> cont;  
-    }
-    cout << "Thank you for using the random recipe generator! Have a great day." << endl;
+    helper(category);
     return 0;
 }
 
 //function to check if the file contains the word "run"
-bool check_run(string filename){
+string check_run(string filename){
     ifstream file(filename);
+    string word;
     if (file.is_open()) {
-        string word;
         while (file >> word) {
-            if (word == "run") {
+            if (word == "Breakfast" || word == "breakfast" || word == "Lunch" || word == "lunch" || word == "Dinner" || word == "dinner" || word == "Dessert" || word == "dessert") {
                 file.close();
                 ofstream clearfile(filename, ios::trunc); //Clear the file
                 clearfile.close();
-                return true;
+                return word;
             }
         }
         file.close();
     }
-    return false;
-}
-
-string select(string option){
-    while(option != "Breakfast" && option != "breakfast" && option != "Lunch" && option != "lunch" && 
-          option != "Dinner" && option != "dinner" && option != "Dessert" && option != "dessert")
-    {
-        cout << "Please enter a valid option (Breakfast, Lunch, Dinner, Dessert): ";
-        cin >> option;
-    }
-    return option;
+    return word;
 }
 
 void helper(string selection){

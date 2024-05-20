@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// Function to check if a file is empty
+//Function to check if a file is empty
 bool isFileEmpty(const string& filename) {
     struct stat fileStat;
     if (stat(filename.c_str(), &fileStat) == 0) {
@@ -31,9 +31,17 @@ int main(){
         cout << "Does something..." << endl;
     }
     else if(option == 3){
+        string category;
+        cout << "Welcome to the Random Recipe Generator!" << endl;
+        cout << "Looking for new recipes? Well, choose the category you want your recipe from (Breakfast, Lunch, Dinner, or Dessert): ";
+        cin >> category;
+        while(category != "Breakfast" && category != "breakfast" && category != "Lunch" && category != "lunch" && category != "Dinner" && category != "dinner" && category != "Dessert" && category != "dessert"){
+            cout << "Please enter a valid category of recipes from (Breakfast, Lunch, Dinner, or Dessert): ";
+            cin >> category;
+        }
         ofstream outputfile("start.txt", ios::trunc);
         if (outputfile.is_open()) {
-            outputfile << "run" << endl; //Append the word "run" followed by a newline
+            outputfile << category << endl; //Append the word "run" followed by a newline
             outputfile.close();
         } 
         string line;
@@ -45,7 +53,7 @@ int main(){
                 if (inputfile.is_open()) {
                     bool hasContent = false;
                     while (getline(inputfile, line)) {
-                        if (line != "run" && !line.empty()) {
+                        if (line != category && !line.empty()) {
                             hasContent = true;
                             break;
                         }
@@ -67,6 +75,7 @@ int main(){
             }
             this_thread::sleep_for(chrono::seconds(1)); // Wait before checking again
         }
+        cout << "Thank you for using the random recipe generator!" << endl;
     }
     return 0;
 }
