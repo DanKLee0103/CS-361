@@ -1,0 +1,16 @@
+Spaghetti Carbonara 🍝:
+    Ingredients:
+        Spaghetti
+        Pancetta or bacon
+        Eggs
+        Parmesan cheese
+        Black pepper
+
+    Instructions:
+        Cook spaghetti until al dente.
+        Sauté pancetta or bacon until crispy.
+        Beat eggs, Parmesan cheese, and black pepper together.
+        Toss cooked pasta with egg mixture and pancetta.
+        Serve immediately.
+
+    Calories: Approximately 500 per serving

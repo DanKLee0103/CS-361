@@ -1,0 +1,17 @@
+Beef Tacos 🌮:
+    Ingredients:
+        Ground beef
+        Taco seasoning
+        Tortillas
+        Shredded lettuce
+        Diced tomatoes
+        Shredded cheddar cheese
+        Sour cream
+
+    Instructions:
+        Brown ground beef and mix in taco seasoning.
+        Warm tortillas.
+        Assemble tacos with beef, lettuce, tomatoes, cheese, and sour cream.
+        Enjoy your flavorful tacos!
+
+    Calories: Varies based on portion size

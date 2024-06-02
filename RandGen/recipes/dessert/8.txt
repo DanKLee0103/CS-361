@@ -1,0 +1,12 @@
+Frozen Banana Cereal Pops 👌:
+    Ingredients:
+        Bananas
+        Yogurt
+        Cereal
+
+    Instructions:
+        Dip bananas in yogurt.
+        Roll in cereal.
+        Freeze and enjoy!
+        
+    Calories: Approximately 200 per serving

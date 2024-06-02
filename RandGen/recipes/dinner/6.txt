@@ -1,0 +1,17 @@
+Veggie Pizza 🍕:
+    Ingredients:
+        Pizza dough
+        Tomato sauce
+        Mozzarella cheese
+        Bell peppers
+        Red onion
+        Mushrooms
+        Olives
+
+    Instructions:
+        Roll out pizza dough.
+        Spread tomato sauce, top with cheese, and add veggies.
+        Bake until crust is golden and cheese is melted.
+        Slice and enjoy!
+
+    Calories: Varies based on toppings

@@ -1,0 +1,15 @@
+Savory Breakfast Bowl:
+    Ingredients:
+        Boiled eggs
+        Sweet potatoes
+        Peppers
+        Avocado
+        Spinach
+        Parmesan cheese
+
+    Instructions:
+        Layer the ingredients in a bowl.
+        Dust with Parmesan cheese.
+        Enjoy! 😊
+
+    Calories: 895 per serving
